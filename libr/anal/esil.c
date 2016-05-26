@@ -407,12 +407,6 @@ static int esil_internal_read(RAnalEsil *esil, const char *str, ut64 *num) {
 			return false;
 		}
 		break;
-	case '0': // unset flag without affecting esil vars cur, old and lastsz
-		*num = 0;
-		break;
-	case '1': // set flag without affecting esil vars cur, old and lastsz
-		*num = 1;
-		break;
 	default:
 		{ // Handle the case of "internal set", i.e. set a register without
 		  // having side effects. The value to be set must be in decimal and
